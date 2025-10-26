@@ -11,10 +11,10 @@ function List() {
     const checkRef = useRef(null);
     const addBtn = useRef(null);
 
-    const inputEdit = useRef(null);
-    const inputDateEdit = useRef(null);
-    const inputDescEdit = useRef(null);
-    const inputDurEdit = useRef(null);
+    const inputEdit = useRef([]);
+    const inputDateEdit = useRef([]);
+    const inputDescEdit = useRef([]);
+    const inputDurEdit = useRef([]);
 
     const [tasks, setTasks] = useState(
         sessionStorage.getItem("tasks")
@@ -58,29 +58,20 @@ function List() {
 
     function handleEditTask(index) {
         const editedTask = {
-            text: inputEdit.current.value,
-            dueDate: inputDateEdit.current.value,
-            description: inputDescEdit.current.value,
-            duration: inputDurEdit.current.value,
+            text: inputEdit.current[index].value,
+            dueDate: inputDateEdit.current[index].value,
+            description: inputDescEdit.current[index].value,
+            duration: inputDurEdit.current[index].value,
             complete: false,
         };
 
-        const updatedTasks = tasks.map((task, i) => {
-            if (i === index) {
-                return editedTask;
-            }
-            return task
-        });
+        const updatedTasks = tasks.map((task, i) => (i === index ? editedTask : task))
         setTasks(updatedTasks);
-        sessionStorage.setItem("tasks", JSON.stringify(updatedTasks));
-
-
-
-
+        sessionStorage.setItem("tasks", JSON.stringify(updatedTasks))
     }
 
     const toggleVisibility = () => {
-        setVisibility(!isVisible); // Toggle the boolean state
+        setVisibility(!isVisible)
     };
 
     return (
@@ -147,7 +138,7 @@ function List() {
                             <div className="edit-block" style={{ display: isVisible ? 'block' : 'none' }}>
                                 <label htmlFor="taskEdit">New Name:</label>
                                 <input
-                                    ref={inputEdit}
+                                    ref={el => inputEdit.current[index] = el}
                                     type="text"
                                     id="taskEdit"
                                     name="taskEdit"
@@ -155,7 +146,7 @@ function List() {
 
                                 <label htmlFor="descEdit">New Description:</label>
                                 <input
-                                    ref={inputDescEdit}
+                                    ref={el => inputDescEdit.current[index] = el}
                                     type="text"
                                     id="descEdit"
                                     name="descEdit"
@@ -163,14 +154,14 @@ function List() {
 
                                 <label htmlFor="dateEdit">New Due Date:</label>
                                 <input
-                                    ref={inputDateEdit}
+                                    ref={el => inputDateEdit.current[index] = el}
                                     type="date"
                                     id="dateEdit"
                                     name="dateEdit"
 
                                 />
                                 <label htmlFor="durEdit">New Duration:</label>
-                                <select ref={inputDurEdit} type="select" id="durEdit" name="durEdit">
+                                <select ref={el => inputDurEdit.current[index] = el} type="select" id="durEdit" name="durEdit">
                                     <option value="short">Short</option>
                                     <option value="medium">Medium</option>
                                     <option value="long">Long</option>
@@ -182,8 +173,8 @@ function List() {
 
                         </div>
                     ))}
-                </ul>
-            </div>
+                </ul >
+            </div >
         </>
     );
 }
