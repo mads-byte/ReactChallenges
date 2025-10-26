@@ -1,0 +1,23 @@
+body {
+    max-width: 1800px;
+    height: 100vh;
+    background: linear-gradient(214deg, rgba(190, 161, 204, 1) 0%, rgba(255, 138, 138, 1) 50%, rgba(250, 198, 125, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-container {
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 60px;
+    margin-top: 200px;
+    color: rgb(55, 12, 95);
+}
+
+.home-container p {
+    font-size: 30px;
+    margin-top: 20px;
+    color: rgb(55, 12, 95);
+}

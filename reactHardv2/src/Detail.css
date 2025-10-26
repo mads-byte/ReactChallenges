@@ -1,0 +1,34 @@
+.detail-container {
+    width: 800px;
+    padding: 20px;
+    background-color: rgba(88, 88, 88, 0.569);
+    margin: auto;
+    margin-top: 90px;
+    border-radius: 5px;
+    font-size: 26px;
+}
+
+.detail-container h2 {
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.detail-container p {
+    margin-top: 20px;
+}
+
+.detail-container a,
+.detail-container a:visited {
+    display: block;
+    padding-top: 30px;
+    color: white;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.detail-container a:hover {
+    color: rgb(55, 12, 95)
+}

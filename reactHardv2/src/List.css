@@ -1,0 +1,169 @@
+.list-header h2 {
+    font-size: 36px;
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: rgb(55, 12, 95);
+}
+
+.task-input {
+    background-color: rgba(88, 88, 88, 0.569);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-size: 14px;
+}
+
+.task-input input {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.task-input select {
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.task-input label {
+    font-size: 18px;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 5px;
+
+}
+
+button:hover {
+    background-color: rgba(128, 128, 128, 0.189);
+    outline: solid 1px black;
+
+}
+
+.required {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(156, 2, 2);
+}
+
+.task-list {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.task-list ul {
+    list-style-type: none;
+}
+
+.task {
+    background-color: rgba(88, 88, 88, 0.569);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+
+.task li {
+    font-size: 26px;
+}
+
+.check {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    background-color: #eee;
+}
+
+
+
+.task a,
+.task a:active,
+.task a:visited {
+    color: white;
+    text-align: none;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.task a:hover {
+    /* scale: 1.1; */
+    color: rgb(55, 12, 95);
+    font-weight: 800;
+}
+
+
+.task-label {
+    display: inline-block;
+}
+
+
+.edit-block {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.569);
+    color: black;
+    border-radius: 5px;
+    padding: 10px 20px 10px;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+.edit-block label {
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 20px;
+}
+
+.edit-block button:hover {
+    color: black;
+}
+
+.edit-block input,
+.edit-block select {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 10px 5px;
+}
+
+.edit-block p {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(156, 2, 2);
+}
